@@ -1,0 +1,12 @@
+/* Base */
+@import 'base';
+
+/* Vendor */
+@import "~bootstrap/scss/bootstrap";
+
+/* Components */
+@import 'components';
+
+/* styles */
+@import 'main';
+@import 'sections';

@@ -1,0 +1,74 @@
+.btn{
+  border-radius: 50px;
+  padding: 0.45rem 1.25rem;
+
+  &,
+  &:hover{
+    color: $color-white;
+  }
+
+  &-link{
+    font-weight: 500;
+    text-decoration: none;
+    color: $color-dark;
+    padding: 0.45rem 0.75rem;
+
+    &:hover{
+      color: darken($color-purple, 10%);
+    }
+  }
+
+  &.full-width{
+    width: 100%;
+  }
+
+  &-purple{
+    background-color: $color-purple;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    .open>.dropdown-toggle.btn-purple {
+      background-color: darken($color-purple, 10%);
+      border-color: darken($color-purple, 10%);
+    }
+
+    &-bordered{
+      background-color: $color-white;
+      border-color: $color-purple;
+      color: $color-dark;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.active,
+      .open>.dropdown-toggle.btn-purple-bordered {
+        background-color: darken($color-purple, 10%);
+        border-color: darken($color-purple, 10%);
+        color: $color-white;
+      }
+    }
+  }
+  &-green{
+    background-color: $color-green;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    .open>.dropdown-toggle.btn-green {
+      background-color: darken($color-green, 10%);
+      border-color: darken($color-green, 10%);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &-large{
+      font-size: 18px;
+      font-weight: 700;
+      padding: 0.91rem 2.25rem;
+    }
+  }
+}
+

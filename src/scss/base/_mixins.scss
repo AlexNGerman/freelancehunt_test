@@ -1,0 +1,36 @@
+// Menu Icon Switcher
+@mixin icon-switcher($icon1, $icon2) {
+  &:before,
+  &:after{
+    transition: color 0.2s ease, opacity 0.3s ease;
+    font-family: $font-icon;
+    color: inherit;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+  &:not(.show){
+    &:before{
+      content: $icon1;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.0);
+    }
+  }
+  &:after{
+    content: $icon2;
+    opacity: 0;
+  }
+
+  &:hover{
+    color: $color-purple;
+  }
+
+  &.show{
+    &:after{
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.0);
+    }
+  }
+}
